@@ -1,9 +1,13 @@
-﻿import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
+import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -74,24 +78,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "coin-spin": {
-          "0%, 100%": { transform: "scaleX(1)" },
-          "50%": { transform: "scaleX(0.1)" },
-        },
         "bounce-in": {
           "0%": { transform: "scale(0)", opacity: "0" },
           "50%": { transform: "scale(1.3)" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        "blink": {
+        blink: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
         },
@@ -101,14 +93,11 @@ export default {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "coin-spin": "coin-spin 1s ease-in-out infinite",
         "bounce-in": "bounce-in 0.5s ease-out",
         blink: "blink 1s step-end infinite",
         float: "float 2s ease-in-out infinite",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [],
 } satisfies Config;
