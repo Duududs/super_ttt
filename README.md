@@ -71,6 +71,9 @@ npm install
 Inicie o servidor
 npm run dev
 ```
+## Live Demo
+
+https://super-ttt.vercel.app
 
 ---
 
